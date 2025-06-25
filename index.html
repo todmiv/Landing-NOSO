@@ -1,0 +1,508 @@
+html_code = """<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вступите в СРО Ассоциации «НОСО» – надежного партнера с 2009 года</title>
+    <meta name="description" content="Ассоциация «Нижегородское объединение строительных организаций» - СРО с 2009 года. Получите допуск для строительной деятельности в Нижегородской области.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__logo">
+                    <img src="logo-noso.svg" alt="Логотип НОСО" class="nav__logo-img">
+                    <span class="nav__logo-text">НОСО</span>
+                </div>
+                <ul class="nav__menu" id="nav-menu">
+                    <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="#advantages" class="nav__link">Преимущества</a></li>
+                    <li class="nav__item"><a href="#process" class="nav__link">Процесс</a></li>
+                    <li class="nav__item"><a href="#documents" class="nav__link">Документы</a></li>
+                    <li class="nav__item"><a href="#calculator" class="nav__link">Калькулятор</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                </ul>
+                <div class="nav__contact">
+                    <a href="tel:+78314331527" class="nav__phone">+7 (831) 433-15-27</a>
+                    <button class="btn btn--primary" onclick="openModal('consultationModal')">Консультация</button>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__background">
+            <div class="hero__particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title" data-aos="fade-up">
+                        Вступите в СРО Ассоциации «НОСО» – 
+                        <span class="text-highlight">надежного партнера с 2009 года</span>
+                    </h1>
+                    <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Ассоциация «Нижегородское объединение строительных организаций» – ваш проводник в мир строительного бизнеса Нижегородской области
+                    </p>
+                    <div class="hero__features" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>С 2009 года на рынке</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Разумная политика взносов</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Информационная открытость</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__form">
+                    <div class="form-card" data-aos="fade-left" data-aos-delay="600">
+                        <h3 class="form-card__title">Получите консультацию бесплатно</h3>
+                        <form class="form" id="hero-form">
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="company-name" placeholder="Название организации" required>
+                                <label for="company-name" class="form__label">Название организации</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="inn" placeholder="ИНН" required>
+                                <label for="inn" class="form__label">ИНН</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="contact-person" placeholder="Контактное лицо" required>
+                                <label for="contact-person" class="form__label">Контактное лицо</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="tel" class="form__input" id="phone" placeholder="+7 (___) ___-__-__" required>
+                                <label for="phone" class="form__label">Телефон</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" class="form__input" id="email" placeholder="Email" required>
+                                <label for="email" class="form__label">Email</label>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full">
+                                Получить консультацию
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <p class="form__privacy">
+                                Нажимая кнопку, вы соглашаетесь с 
+                                <a href="#privacy">политикой конфиденциальности</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">О СРО Ассоциации «НОСО»</h2>
+                <p class="section-subtitle">
+                    Саморегулируемая организация с многолетним опытом и безупречной репутацией
+                </p>
+            </div>
+            <div class="about__content">
+                <div class="about__text" data-aos="fade-right">
+                    <div class="about__item">
+                        <div class="about__icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="about__info">
+                            <h4>История создания</h4>
+                            <p>Статус СРО получен в 2009 году. Реорганизована из СРО «Межрегиональное объединение сельских строителей»</p>
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="about__info">
+                            <h4>Региональный охват</h4>
+                            <p>Объединяем предпринимателей строительной отрасли Нижегородской области</p>
+                        </div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <div class="about__info">
+                            <h4>Правовая база</h4>
+                            <p>Деятельность ведется в соответствии с нормами Градостроительного кодекса РФ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__visual" data-aos="fade-left">
+                    <div class="stats-card">
+                        <div class="stat">
+                            <div class="stat__number" data-count="16">16</div>
+                            <div class="stat__label">лет на рынке</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number" data-count="500">500+</div>
+                            <div class="stat__label">членов СРО</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number" data-count="100">100%</div>
+                            <div class="stat__label">прозрачность</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Преимущества СРО Ассоциации «НОСО»</h2>
+                <p class="section-subtitle">
+                    Почему строительные компании выбирают именно нас
+                </p>
+            </div>
+            <div class="advantages__grid">
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="advantage-card__icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h4 class="advantage-card__title">Значительный срок деятельности</h4>
+                    <p class="advantage-card__text">
+                        Ассоциация прочно утвердилась на строительном рынке с 2009 года
+                    </p>
+                </div>
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="advantage-card__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4 class="advantage-card__title">Опытное руководство</h4>
+                    <p class="advantage-card__text">
+                        Многолетний опыт руководства в управлении строительной отраслью
+                    </p>
+                </div>
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="advantage-card__icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h4 class="advantage-card__title">Разумная политика взносов</h4>
+                    <p class="advantage-card__text">
+                        Сохранность компенсационных фондов и справедливые взносы
+                    </p>
+                </div>
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="advantage-card__icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4 class="advantage-card__title">Информационная открытость</h4>
+                    <p class="advantage-card__text">
+                        Полная прозрачность в соответствии с действующим законодательством
+                    </p>
+                </div>
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="advantage-card__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4 class="advantage-card__title">Региональное лидерство</h4>
+                    <p class="advantage-card__text">
+                        Преимущества перед другими СРО Нижегородского региона
+                    </p>
+                </div>
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="advantage-card__icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="advantage-card__title">Образовательное партнерство</h4>
+                    <p class="advantage-card__text">
+                        Сотрудничество с АНО ДПО «Учебный центр РСС»
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Процесс получения допуска СРО</h2>
+                <p class="section-subtitle">Простой и понятный алгоритм вступления в СРО</p>
+            </div>
+            <div class="process__timeline">
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-item__number">1</div>
+                    <div class="timeline-item__content">
+                        <h4>Подача документов</h4>
+                        <p>Подготовка и подача полного пакета документов в Ассоциацию «НОСО»</p>
+                        <span class="timeline-item__duration">1-2 дня</span>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-item__number">2</div>
+                    <div class="timeline-item__content">
+                        <h4>Проверка документов</h4>
+                        <p>Экспертиза поданных документов и подготовка дела к рассмотрению</p>
+                        <span class="timeline-item__duration">1 день</span>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-item__number">3</div>
+                    <div class="timeline-item__content">
+                        <h4>Принятие решения</h4>
+                        <p>Рассмотрение заявки и принятие решения о выдаче свидетельства</p>
+                        <span class="timeline-item__duration">1-3 дня</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents" id="documents">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Необходимые документы</h2>
+                <p class="section-subtitle">Полный перечень документов для вступления в СРО</p>
+            </div>
+            <div class="documents__content">
+                <div class="documents__checklist" data-aos="fade-right">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="doc1" class="checklist-item__checkbox">
+                        <label for="doc1" class="checklist-item__label">
+                            <i class="fas fa-file-alt"></i>
+                            Учредительные документы (Устав, ОГРН, ИНН)
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="doc2" class="checklist-item__checkbox">
+                        <label for="doc2" class="checklist-item__label">
+                            <i class="fas fa-user-graduate"></i>
+                            Документы на специалистов НРС
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="doc3" class="checklist-item__checkbox">
+                        <label for="doc3" class="checklist-item__label">
+                            <i class="fas fa-tools"></i>
+                            Справки о материально-технической базе
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="doc4" class="checklist-item__checkbox">
+                        <label for="doc4" class="checklist-item__label">
+                            <i class="fas fa-shield-alt"></i>
+                            Страховой полис ответственности
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="doc5" class="checklist-item__checkbox">
+                        <label for="doc5" class="checklist-item__label">
+                            <i class="fas fa-chart-line"></i>
+                            Бухгалтерская отчетность
+                        </label>
+                    </div>
+                </div>
+                <div class="documents__help" data-aos="fade-left">
+                    <div class="help-card">
+                        <h4>Нужна помощь с документами?</h4>
+                        <p>Наши специалисты помогут подготовить полный пакет документов</p>
+                        <div class="help-card__contacts">
+                            <div class="contact">
+                                <strong>Грибков Дмитрий Сергеевич</strong>
+                                <p>Тел: +7 (831) 433-15-27</p>
+                                <p>Email: dsgribkov.noso@mail.ru</p>
+                            </div>
+                            <div class="contact">
+                                <strong>Изюмова Ирина Борисовна</strong>
+                                <p>Тел: +7 (831) 419-72-25</p>
+                                <p>Email: i.izyumova@sronoso.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Калькулятор стоимости</h2>
+                <p class="section-subtitle">Рассчитайте стоимость вступления в СРО</p>
+            </div>
+            <div class="calculator__card" data-aos="fade-up" data-aos-delay="200">
+                <div class="calculator__form">
+                    <div class="form-group">
+                        <label>Тип СРО</label>
+                        <select id="sro-type" class="form-select">
+                            <option value="builders">Строители</option>
+                            <option value="designers">Проектировщики</option>
+                            <option value="surveyors">Изыскатели</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Максимальная сумма контракта (руб.)</label>
+                        <input type="range" id="contract-sum" class="form-range" min="100000" max="10000000" value="1000000" step="100000">
+                        <div class="range-value" id="contract-value">1 000 000</div>
+                    </div>
+                </div>
+                <div class="calculator__result">
+                    <h4>Расчет стоимости:</h4>
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span>Вступительный взнос:</span>
+                            <span id="entry-fee">5 000 ₽</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Ежемесячный взнос:</span>
+                            <span id="monthly-fee">5 000 ₽</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Компенсационный фонд:</span>
+                            <span id="compensation-fund">300 000 ₽</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Страхование (год):</span>
+                            <span id="insurance">7 500 ₽</span>
+                        </div>
+                        <div class="cost-total">
+                            <span>Итого для начала работы:</span>
+                            <span id="total-cost">317 500 ₽</span>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary" onclick="openModal('consultationModal')">
+                        Получить точный расчет
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-subtitle">Свяжитесь с нами удобным способом</p>
+            </div>
+            <div class="contacts__content">
+                <div class="contacts__info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h4>Ассоциация «НОСО»</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Адрес:</strong>
+                                <p>603000, Нижегородская область, г. Нижний Новгород, ул. Большая Покровская, д. 15, пом. 7</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Время работы:</strong>
+                                <p>Понедельник - пятница: 09:00 - 17:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Телефоны:</strong>
+                                <p>+7 (831) 433-15-27, +7 (831) 419-72-25</p>
+                                <p>+7 (495) 775-81-11 (многоканальный)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>info@sronoso.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map" data-aos="fade-left">
+                    <div class="map-placeholder">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f6c4e4b8c7d8e9f0a1b2c3d4e5f6789&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <img src="logo-noso.svg" alt="Логотип НОСО">
+                        <span>НОСО</span>
+                    </div>
+                    <p>© 2009 - 2025 СРО Ассоциация «Нижегородское объединение строительных организаций (НОСО)»</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#privacy">Политика конфиденциальности</a>
+                    <a href="https://www.sronoso.ru" target="_blank">Официальный сайт</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="consultationModal">
+        <div class="modal__backdrop" onclick="closeModal('consultationModal')"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Заказать консультацию</h3>
+                <button class="modal__close" onclick="closeModal('consultationModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal__body">
+                <form class="form" id="consultation-form">
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Название организации" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Контактное лицо" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" class="form__input" placeholder="Телефон" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" class="form__input" placeholder="Email" required>
+                    </div>
+                    <div class="form__group">
+                        <textarea class="form__input" placeholder="Ваш вопрос (необязательно)" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
