@@ -1148,3 +1148,71 @@ h1, h2, h3, h4, h5, h6 {
 [data-aos="fade-right"] {
     animation: fadeInRight 0.8s ease-out;
 }
+
+.documents__templates {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.templates-block__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.templates-block__text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.templates-block__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.templates-block__item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.templates-block__item:hover {
+  color: #0D6EFD;
+}
+
+.templates-block__item-icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.templates-block__item-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.templates-block__item:hover .templates-block__item-icon path {
+  fill: #0D6EFD;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .documents__inner {
+    flex-direction: column;
+  }
+  
+  .documents__templates {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
