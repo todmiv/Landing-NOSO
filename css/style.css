@@ -682,6 +682,26 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
 }
 
+.download-checklist {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.download-checklist a {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-checklist a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
 .help-card {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -1249,6 +1269,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .templates-block__item:hover .templates-block__item-icon path {
   fill: white;
+}
+
+.nav__sro-number {
+    font-size: 0.9rem;
+    color: #7F8C8D;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #E8E8E8;
 }
 
 /* Адаптация для мобильных устройств */
