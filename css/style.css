@@ -1004,7 +1004,7 @@ h1, h2, h3, h4, h5, h6 {
     background: white;
     border-radius: 16px;
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     position: relative;
     z-index: 1;
     animation: modalAppear 0.3s ease-out;
