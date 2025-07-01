@@ -230,6 +230,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     cursor: pointer;
     color: #2C3E50;
+    transition: transform 0.3s ease;
+}
+
+.nav__toggle.active {
+    transform: rotate(90deg);
+    color: #E67E22;
+}
+
+.nav__menu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav__menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Hero Section */

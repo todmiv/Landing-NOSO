@@ -15,13 +15,23 @@ const navMenu = document.getElementById('nav-menu');
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
     });
 
     // Close menu when clicking on link
     document.querySelectorAll('.nav__link').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
         });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && e.target !== navToggle) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
     });
 }
 
