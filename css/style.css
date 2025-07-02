@@ -809,36 +809,11 @@ h1, h2, h3, h4, h5, h6 {
     background: #E8E8E8;
     outline: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-/* Стилизация ползунка для WebKit браузеров */
-.form-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-    margin-top: -6px;
-}
-
-/* Стилизация ползунка для Firefox */
-.form-range::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-    border: none;
-}
-
-/* Стилизация трека для Firefox */
-.form-range::-moz-range-track {
-    height: 8px;
-    border-radius: 4px;
-    background: #E8E8E8;
-}
-
+/* Унифицированные стили ползунка */
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 24px;
@@ -847,7 +822,28 @@ h1, h2, h3, h4, h5, h6 {
     background: #E67E22;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(230, 126, 34, 0.3);
+    transition: all 0.2s ease;
 }
+
+.form-range::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #E67E22;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(230, 126, 34, 0.3);
+    transition: all 0.2s ease;
+    border: none;
+}
+
+/* Состояния взаимодействия */
+.form-range::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+.form-range::-moz-range-thumb:hover {
+    transform: scale(1.1);
+}
+
 
 .range-value {
     text-align: center;
