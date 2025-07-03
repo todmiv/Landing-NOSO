@@ -56,12 +56,16 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 12px 24px;
+    min-width: 140px;
     border: none;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 600;
+    white-space: nowrap;
+    overflow: visible;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1074,7 +1078,22 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 30px 30px;
 }
 
-/* Responsive Design */
+/* Адаптивный дизайн */
+@media (max-width: 1080px) {
+  .nav__menu {
+    gap: 10px;
+    flex-wrap: nowrap; /* Запретить перенос строк */
+    overflow-x: auto;  /* Добавить горизонтальный скролл внутри меню, если нужно */
+  }
+  .nav__menu li {
+    white-space: nowrap; /* Запретить перенос текста в пунктах меню */
+    padding: 0 10px;     /* Уменьшить отступы между пунктами */
+  }
+  .nav__link {
+    font-size: 14px;     /* Уменьшить размер шрифта */
+  }
+}
+
 @media (max-width: 1024px) {
     .hero__content,
     .about__content,
