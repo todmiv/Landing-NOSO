@@ -1200,7 +1200,7 @@ h1, h2, h3, h4, h5, h6 {
     .nav__toggle {
         display: block;
     }
-    
+
     .hero__title {
         font-size: 2rem;
     }
@@ -1236,6 +1236,15 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+    }
+
+    .documents__inner {
+        flex-direction: column;
+    }
+    
+    .documents__templates {
+        max-width: 100%;
+        margin-top: 30px;
     }
 }
 
