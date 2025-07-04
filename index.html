@@ -538,10 +538,47 @@
         </div>
     </div>
 
+    <!-- Полноэкранное модальное окно для политики конфиденциальности -->
+    <div class="modal modal--fullscreen" id="privacyModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content--fullscreen">
+            <button class="modal__close" aria-label="Закрыть">&times;</button>
+            <iframe src="" frameborder="0" id="privacyFrame" style="width:100vw;height:100vh;border:none;"></iframe>
+        </div>
+    </div>
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
         AOS.init();
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Открытие модального окна по клику на ссылку политики
+    document.querySelectorAll('a[href="privacy_policy.html"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('privacyFrame').src = 'privacy_policy.html';
+    document.getElementById('privacyModal').classList.add('active');
+        });
+    });
+
+        // Закрытие по крестику или оверлею
+    document.querySelector('#privacyModal .modal__close').onclick = closePrivacyModal;
+    document.querySelector('#privacyModal .modal__overlay').onclick = closePrivacyModal;
+
+    function closePrivacyModal() {
+    document.getElementById('privacyModal').classList.remove('active');
+    document.getElementById('privacyFrame').src = '';
+        }
+
+        // Закрытие по Esc
+    document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePrivacyModal();
+    });
+});
+</script>
+
 </body>
 </html>

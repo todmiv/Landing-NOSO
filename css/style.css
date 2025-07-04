@@ -1040,6 +1040,65 @@ h1, h2, h3, h4, h5, h6 {
     animation: modalAppear 0.3s ease-out;
 }
 
+.modal--fullscreen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  background: rgba(44, 62, 80, 0.85);
+}
+.modal--fullscreen.active {
+  display: flex;
+}
+.modal--fullscreen .modal__overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(44, 62, 80, 0.85);
+  z-index: 1;
+}
+.modal__content--fullscreen {
+  position: relative;
+  background: #fff;
+  border-radius: 0;
+  width: 100vw; height: 100vh;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+.modal--fullscreen .modal__close {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #E67E22;
+  cursor: pointer;
+  z-index: 3;
+}
+#privacyFrame {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .modal--fullscreen .modal__close {
+    top: 8px;
+    right: 12px;
+    font-size: 2rem;
+  }
+  #privacyFrame {
+    height: 90vh;
+  }
+}
+
 @keyframes modalAppear {
     from {
         opacity: 0;
