@@ -1243,6 +1243,14 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: auto;
         margin-right: auto;
     }
+
+        .timeline-item__number {
+        display: none;
+    }
+    
+    .timeline-item__content {
+        position: relative;
+    }
     
     .form-card {
         padding: 30px 20px;
