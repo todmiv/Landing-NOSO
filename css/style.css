@@ -1164,6 +1164,14 @@ h1, h2, h3, h4, h5, h6 {
         gap: 40px;
     }
     
+    .nav__menu {
+    display: none;
+    }
+    .nav__menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+    
     .calculator__card {
         grid-template-columns: 1fr;
         gap: 40px;
